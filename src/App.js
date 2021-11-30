@@ -35,9 +35,16 @@ const tweetsArray = [
 ];
 
 function App() {
+
+  let rows = []
+
+  tweetsArray.forEach((elem, i) => {
+    rows.push(<Tweet tweet={tweetsArray[i]}/>)
+  })
+
   return (
     <div className="App">
-      <Tweet />
+      {rows}
     </div>
   );
 }
